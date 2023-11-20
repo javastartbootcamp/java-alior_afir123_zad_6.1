@@ -8,7 +8,7 @@ public class Person {
     private String firstName;
     private String lastName;
     private int age;
-    private String pesel;
+    private final String pesel;
 
     public Person(String firstName, String lastName, int age, String pesel) {
         checkFirstName(firstName);
@@ -19,17 +19,17 @@ public class Person {
         this.pesel = pesel;
     }
 
-    public void setFirstName(String firstName) {
+    void setFirstName(String firstName) {
         checkFirstName(firstName);
         this.firstName = firstName;
     }
 
-    public void setLastName(String lastName) {
+    void setLastName(String lastName) {
         checkLastName(lastName);
         this.lastName = lastName;
     }
 
-    public void setAge(int age) {
+    void setAge(int age) {
         checkAge(age);
         this.age = age;
     }
